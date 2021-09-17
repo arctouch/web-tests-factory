@@ -26,8 +26,8 @@ if FRAMEWORK_REFERENCE_NUMBER=1; then
   TEST_MOCK_FOLDER="tests/mocks"
   TEST_FILE="tests/className.test.js"
   MOCK_FILE="tests/mocks/classNameMock.js"
-  FRAMEWORK_MOCK=NEXT_MOCK
-  FRAMEWORK_TEST=NEXT_TEST
+  FRAMEWORK_MOCK=${NEXT_MOCK}
+  FRAMEWORK_TEST=${NEXT_TEST}
 fi
 
 ## Insert new folder and tests
