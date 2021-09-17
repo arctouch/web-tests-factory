@@ -9,38 +9,23 @@ This project aims to insert a new folder with a default test on existing project
 
 ## Supported test framework
 
-This project support the following frameworks:
+<!-- begin-progress-table -->
 
-1. Jest
-2.  ...
+| Framework                                   | Assigned          | Progress |
+| ------------------------------------------- | ----------------- | -------- |
+| Jest                                        |  <button onclick="https://github.com/arctouch-leticiacoelho" type="button" name="button">LAC</button>|![90%](https://progress-bar.dev/90)|
+| PyUnit                                      | <button  onclick="https://github.com/arctouch-leticiacoelho" type="button" name="button" >LAC</button> <button  onclick="https://github.com/arctouch-joaolemos" type="button" name="button" >JML</button> |![0%](https://progress-bar.dev/0)|
+| JUnit                                       | ⌛ waiting assign  |![0%](https://progress-bar.dev/0)|
+| Go                                          | ⌛ waiting assign  |![0%](https://progress-bar.dev/0)|  
+| Ruby                                        | ⌛ waiting assign  |![0%](https://progress-bar.dev/0)|
+| Jasmine                                     | ⌛ waiting assign  |![0%](https://progress-bar.dev/0)|
+| PHPUnit                                     | ⌛ waiting assign  |![0%](https://progress-bar.dev/0)|
+| .net                                        | ⌛ waiting assign  |![0%](https://progress-bar.dev/0)|
+
+<!-- end-progress-table -->
+
 
 ## How to insert a new test framework on this project
 
-1. Insert a new FRAMEWORK_MOCK and FRAMEWORK_TEST. Like on next:
 
-
-`NEXT_TEST="import {testingMock} from \"./mocks/className\"
-describe ('Verify testingMethod using testingMock to validate the scenario ABC', () => {
-	test(' testingMock validate scenario A ', () => {
-		expect(testingMethod(testingMock)).toEqual(\"Scenario A is success\");
-	});
-});"`
-
-`NEXT_MOCK="const testingMock= \"Scenario A is success\";"`
-
-
-2. Insert a new if, with all the information that is necessary for create this new test.
-
-`if FRAMEWORK_REFERENCE_NUMBER=1; then
-  FRAMEWORK_NAME="Jest"
-  TEST_FOLDER="tests"
-  TEST_MOCK_FOLDER="tests/mocks"
-  TEST_FILE="tests/className.test.js"
-  MOCK_FILE="tests/mocks/classNameMock.js"
-  FRAMEWORK_MOCK=NEXT_MOCK
-  FRAMEWORK_TEST=NEXT_TEST
-fi`
-
-3. On this project, insert your new test inside the folder: **defaultTests/yourFrameworkName**. This will not do anything, it is just to have an easy way for seeing all the tests inside the script. 
-
-4. This is all! Your new test could be producted using the factoryTests script ! :)
+Access the file Contribute 
