@@ -39,7 +39,7 @@ fi
 
 3. On this project, insert your new test inside the folder: **defaultTests/yourFrameworkName**. This will not do anything, it is just to have an easy way for seeing all the tests inside the script.
 
-4. This is all! Your new test could be produced using the factory tests script!
+4. That is all! Your new test can now be produced using the tests factory script!
 
 ## Contributing
 Pull requests are appreciated. For major changes, please open an **issue** first to discuss what you would like to change.
