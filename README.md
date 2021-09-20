@@ -1,6 +1,6 @@
 # Tests Factory
 
-This project aims to insert a new folder with a default test on existing projects that aren't using unit tests yet. 
+The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests. 
 
 ## How to use this project 
 1. Download the file `testsFactory.sh`
@@ -51,10 +51,9 @@ Thanks to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## License                
-                                                                    
-About the license.       
-                                                                    
+## License
+About the license.
+
 <img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>  <span style="color:orange"><em>This is our contribution to improving the tests culture!</em></span> 
 
 <a href="https://www.facebook.com/ArcTouchBrasil/"><img alt="Facebook icon" src="https://img.icons8.com/ios-filled/50/000000/facebook-circled--v1.png" width="30"/></a>
