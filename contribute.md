@@ -42,7 +42,7 @@ fi
 4. This is all! Your new test could be produced using the factory tests script!
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are appreciated. For major changes, please open an **issue** first to discuss what you would like to change.
 
 <img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>  <span style="color:orange"><em>Thank you! Your contribution is really important for us!</em></span> 
 
