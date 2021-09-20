@@ -6,7 +6,7 @@
 
 ## How to insert a new test framework on this project
 
-We will suppose that this new framework will work on the principal existent script struct. So, if the new framework needs some different steps, feel free to adapt this script.
+We will assume that this new framework will work on the main existing script struct. If the new framework needs different steps, feel free to adapt this script and suggest changes as a new Pull Request
 
 Based on the implementation for Jest Framework:
 
