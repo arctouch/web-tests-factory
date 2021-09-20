@@ -1,0 +1,16 @@
+//
+// Copyright 2021 ArcTouch LLC.
+// All rights reserved.
+//
+// This file, its contents, concepts, methods, behavior, and operation
+// (collectively the "Software") are protected by trade secret, patent,
+// and copyright laws. The use of the Software is governed by a license
+// agreement. Disclosure of the Software to third parties, in any form,
+// in whole or in part, is expressly prohibited except as authorized by
+// the license agreement.
+//
+
+# These owners will be the default owners for everything in
+# the repo. The users listed below will be requested for
+# review when someone opens a pull request.
+*       @arctouch-pedrocosta @arctouch-leticiacoelho
