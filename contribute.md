@@ -49,6 +49,4 @@ Pull requests are appreciated. For major changes, please open an **issue** first
 <a href="https://twitter.com/arctouch"><img alt="Twitter icon" src="https://img.icons8.com/ios-filled/50/000000/twitter-circled--v1.png" width="30"/></a>
 <a href="https://medium.com/arctouch"><img alt="Medium icon" src="https://img.icons8.com/ios-filled/50/000000/medium-logo.png" width="30"/></a>
 <a href="https://dribbble.com/arctouch"><img alt="Dribbble icon" src="https://img.icons8.com/dotty/80/000000/dribbble.png" width="30"/></a>
-<a href="https://www.instagram.com/arctouchlife/"><img alt="Instagram icon" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="30"/></a>                                                                                               
-  
-
+<a href="https://www.instagram.com/arctouchlife/"><img alt="Instagram icon" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="30"/></a>
