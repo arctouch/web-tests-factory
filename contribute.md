@@ -37,7 +37,7 @@ if FRAMEWORK_REFERENCE_NUMBER=1; then
 fi
 ```
 
-3. On this project, insert your new test inside the folder: **defaultTests/yourFrameworkName**. This will not do anything, it is just to have an easy way for seeing all the tests inside the script.
+3. On this project, insert your new test inside the folder: **defaultTests/yourFrameworkName**. It won't do anything, it is just an example in order to see all the tests available in the script.
 
 4. That is all! Your new test can now be produced using the tests factory script!
 
