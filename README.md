@@ -13,8 +13,8 @@ This project aims to insert a new folder with a default test on existing project
 
 | Framework                                   | Assigned          | Progress |
 | ------------------------------------------- | ----------------- | -------- |
-| Jest                                        | <button onclick="https://github.com/arctouch-leticiacoelho" type="button" name="button">LAC</button>|![90%](https://progress-bar.dev/90)|
-| PyUnit                                      | <button  onclick="https://github.com/arctouch-leticiacoelho" type="button" name="button" >LAC</button> <button  onclick="https://github.com/arctouch-joaolemos" type="button" name="button" >JML</button> |![0%](https://progress-bar.dev/0)|
+| Jest                                        | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![90%](https://progress-bar.dev/90)|
+| PyUnit                                      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://github.com/arctouch-joaolemos"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![0%](https://progress-bar.dev/0)|
 | JUnit                                       | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
 | Go                                          | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|  
 | Ruby                                        | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
@@ -25,9 +25,31 @@ This project aims to insert a new folder with a default test on existing project
 <!-- end-progress-table -->
 
 
-## How to insert a new test framework on this project
+## How to contribute
 
-Access the file contribute.md to contribute with the project.
+Access the [Contributing](contribute.md) file to contribute with the project.
+
+## Contributors
+
+Thanks to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center">
+       <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="80px;" style="border-radius:50%" alt=""/>  </a>   
+       <a href="https://github.com/arctouch-pedrocosta"><img src="https://avatars.githubusercontent.com/u/10923005?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+       <a href="https://github.com/arctouch-joaolemos"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+    </td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License                
                                                                     
