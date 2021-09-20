@@ -8,7 +8,7 @@
 
 We will assume that this new framework will work on the main existing script struct. If the new framework needs different steps, feel free to adapt this script and suggest changes as a new Pull Request
 
-Based on the implementation for Jest Framework:
+Based on the implementation for the Jest Framework:
 
 1. Insert a new FRAMEWORK_MOCK and FRAMEWORK_TEST. Like on next:
 
