@@ -23,7 +23,7 @@ describe ('Verify testingMethod using testingMock to validate the scenario ABC',
 JEST_MOCK="const testingMock= \"Scenario A is success\";"
 ```
 
-2. Insert a new if, with all the information that is necessary for create this new test.
+2. Insert a new if, with all the information that is necessary for create a new test.
 
 ```bash
 if FRAMEWORK_REFERENCE_NUMBER=1; then
