@@ -44,8 +44,13 @@ fi
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-<img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="50">  <span style="color:orange"><em>Thank you! Your contribution is really important for us!</em></span> 
+<img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>  <span style="color:orange"><em>Thank you! Your contribution is really important for us!</em></span> 
 
-
+<a href="https://www.facebook.com/ArcTouchBrasil/"><img alt="Facebook icon" src="https://img.icons8.com/ios-filled/50/000000/facebook-circled--v1.png" width="30"/></a>
+<a href="https://www.linkedin.com/company/arctouch"><img alt="Linkedin icon" src="https://img.icons8.com/ios-filled/50/000000/linkedin-circled--v1.png" width="30"/></a>
+<a href="https://twitter.com/arctouch"><img alt="Twitter icon" src="https://img.icons8.com/ios-filled/50/000000/twitter-circled--v1.png" width="30"/></a>
+<a href="https://medium.com/arctouch"><img alt="Medium icon" src="https://img.icons8.com/ios-filled/50/000000/medium-logo.png" width="30"/></a>
+<a href="https://dribbble.com/arctouch"><img alt="Dribbble icon" src="https://img.icons8.com/dotty/80/000000/dribbble.png" width="30"/></a>
+<a href="https://www.instagram.com/arctouchlife/"><img alt="Instagram icon" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="30"/></a>                                                                                               
   
 
