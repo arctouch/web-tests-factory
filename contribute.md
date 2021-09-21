@@ -2,15 +2,13 @@
 You can contribute to this project by inserting a new Test Framework on this Test Factory or reporting bugs.
 
 ## How to insert a new test framework on this project
-We will assume that this new framework will work on the main existing script struct. If the new framework needs different steps, feel free to adapt this script and suggest changes as a new Pull Request.
+We will assume that this new framework will work on the main existing script struct. If the new framework needs different steps, feel free to adapt this script and suggest changes as a new Pull Request
+
+Based on the implementation for the Jest Framework:
 
 1. On the [testsFactory.sh](testsFactory.sh) file, insert a new FRAMEWORK_MOCK constant and FRAMEWORK_TEST constant. 
    > FRAMEWORK_TEST: The default test implementation as a string.
    > FRAMEWORK_MOCK: The default mock example.
-
-Based on the implementation for the Jest Framework:
-
-1. Insert a new FRAMEWORK_MOCK and FRAMEWORK_TEST. Like on next:
 
 ```bash
 JEST_TEST="import {testingMock} from \"./mocks/className\"
