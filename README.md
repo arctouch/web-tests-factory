@@ -52,7 +52,7 @@ Thanks to these wonderful people:
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
-About the license.
+[MIT license](LICENSE).
 
 <img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>  <span style="color:orange"><em>This is our contribution to improving the tests culture!</em></span> 
 
