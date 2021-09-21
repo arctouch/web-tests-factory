@@ -18,7 +18,7 @@ describe ('Verify testingMethod using testingMock to validate the scenario ABC',
 	});
 });"
 
-JEST_MOCK="const testingMock= \"Scenario A is success\";"
+JEST_MOCK="const testingMock= \"Scenario A is successful\";"
 ```
 
 2. Insert a new if, with all the information that is necessary for create a new test.
