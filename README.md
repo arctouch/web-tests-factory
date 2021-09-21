@@ -1,10 +1,14 @@
 # Tests Factory
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests. 
 =======
 This project aims to insert a new folder with a default test on existing projects that aren't using unit tests yet. 
 >>>>>>> a9e6898 (Add new contributors image)
+=======
+The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests. 
+>>>>>>> 9465a0d (Add new description)
 
 ## How to use this project 
 1. Download the file `testsFactory.sh`
@@ -54,6 +58,7 @@ Thanks to these wonderful people:
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
 <span style="color:orange"><em>Brought to you by </span> <img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>
 
 <span style="color:orange"><em>This is our contribution to improving the tests culture!</em></span> 
