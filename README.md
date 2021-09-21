@@ -1,6 +1,8 @@
 # Tests Factory
 
-The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests. 
+The project Tests Factory has a goal of inserting a new default unit test implementation to existing projects. The result of the script execution will be a folder with a default test on your project, it will help facilitate the creation of new tests.
+
+Hope you like it!
 
 ## How to use this project 
 1. Download the file `testsFactory.sh`
