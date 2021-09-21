@@ -4,8 +4,8 @@ The project Tests Factory aims to insert a new default unit test implementation.
 
 ## How to use this project 
 1. Download the file `testsFactory.sh`
-2. Inside the principal project folder, execute the script : `./testsFactory.sh`
-3. Follow the instructions, and define with the related number how framework you need.
+2. Inside the root project folder, execute the script : `./testsFactory.sh`
+3. Follow the instructions provided through the script making sure to define the related number of the test framework you need.
 
 ## Supported test framework
 
