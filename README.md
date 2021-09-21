@@ -51,10 +51,10 @@ Thanks to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## License
-[MIT license](LICENSE).
 
-<img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>  <span style="color:orange"><em>This is our contribution to improving the tests culture!</em></span> 
+<span style="color:orange"><em>Brought to you by </em></span> <img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>
+
+<span style="color:orange"><em>This is our contribution to improving the tests culture!</em></span> 
 
 <a href="https://www.facebook.com/ArcTouchBrasil/"><img alt="Facebook icon" src="https://img.icons8.com/ios-filled/50/000000/facebook-circled--v1.png" width="30"/></a>
 <a href="https://www.linkedin.com/company/arctouch"><img alt="Linkedin icon" src="https://img.icons8.com/ios-filled/50/000000/linkedin-circled--v1.png" width="30"/></a>
