@@ -1,46 +1,65 @@
 # Tests Factory
 
-This project aims to insert a new folder with a default test on existing projects that aren't using unit tests yet. 
+The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests.
 
-## How to use this project 
+
+## How to use this project
 1. Download the file `testsFactory.sh`
 2. Inside the principal project folder, execute the script : `./testsFactory.sh`
 3. Follow the instructions, and define with the related number how framework you need.
 
 ## Supported test framework
 
-This project support the following frameworks:
+<!-- begin-progress-table -->
 
-1. Jest
-2.  ...
+| Framework                                   | Assigned          | Progress |
+| ------------------------------------------- | ----------------- | -------- |
+| Jest                                        | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![90%](https://progress-bar.dev/90)|
+| PyUnit                                      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://github.com/arctouch-joaolemos"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![0%](https://progress-bar.dev/0)|
+| JUnit                                       | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
+| Go                                          | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|  
+| Ruby                                        | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
+| Jasmine                                     | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
+| PHPUnit                                     | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
+| .net                                        | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
 
-## How to insert a new test framework on this project
-
-1. Insert a new FRAMEWORK_MOCK and FRAMEWORK_TEST. Like on next:
-
-
-`NEXT_TEST="import {testingMock} from \"./mocks/className\"
-describe ('Verify testingMethod using testingMock to validate the scenario ABC', () => {
-	test(' testingMock validate scenario A ', () => {
-		expect(testingMethod(testingMock)).toEqual(\"Scenario A is success\");
-	});
-});"`
-
-`NEXT_MOCK="const testingMock= \"Scenario A is success\";"`
+<!-- end-progress-table -->
 
 
-2. Insert a new if, with all the information that is necessary for create this new test.
+## How to contribute
 
-`if FRAMEWORK_REFERENCE_NUMBER=1; then
-  FRAMEWORK_NAME="Jest"
-  TEST_FOLDER="tests"
-  TEST_MOCK_FOLDER="tests/mocks"
-  TEST_FILE="tests/className.test.js"
-  MOCK_FILE="tests/mocks/classNameMock.js"
-  FRAMEWORK_MOCK=NEXT_MOCK
-  FRAMEWORK_TEST=NEXT_TEST
-fi`
+Access the [Contributing](contribute.md) file to contribute with the project.
 
-3. On this project, insert your new test inside the folder: **defaultTests/yourFrameworkName**. This will not do anything, it is just to have an easy way for seeing all the tests inside the script. 
+## Contributors
 
-4. This is all! Your new test could be producted using the factoryTests script ! :)
+Thanks to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center">
+       <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="80px;" style="border-radius:50%" alt=""/>  </a>   
+       <a href="https://github.com/arctouch-pedrocosta"><img src="https://avatars.githubusercontent.com/u/10923005?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+       <a href="https://github.com/arctouch-joaolemos"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+    </td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
+<span style="color:orange"><em>Brought to you by </em></span> <img src="https://pbs.twimg.com/profile_images/1156669334531596293/ufha-qND_400x400.png"  border="0" alt="ArcTouch Icon" height="60"/>
+
+<span style="color:orange"><em>This is our contribution to improving the tests culture!</em></span>
+
+<a href="https://www.facebook.com/ArcTouchBrasil/"><img alt="Facebook icon" src="https://img.icons8.com/ios-filled/50/000000/facebook-circled--v1.png" width="30"/></a>
+<a href="https://www.linkedin.com/company/arctouch"><img alt="Linkedin icon" src="https://img.icons8.com/ios-filled/50/000000/linkedin-circled--v1.png" width="30"/></a>
+<a href="https://twitter.com/arctouch"><img alt="Twitter icon" src="https://img.icons8.com/ios-filled/50/000000/twitter-circled--v1.png" width="30"/></a>
+<a href="https://medium.com/arctouch"><img alt="Medium icon" src="https://img.icons8.com/ios-filled/50/000000/medium-logo.png" width="30"/></a>
+<a href="https://dribbble.com/arctouch"><img alt="Dribbble icon" src="https://img.icons8.com/dotty/80/000000/dribbble.png" width="30"/></a>
+<a href="https://www.instagram.com/arctouchlife/"><img alt="Instagram icon" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="30"/></a>   
