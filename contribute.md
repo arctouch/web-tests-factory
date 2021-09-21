@@ -8,6 +8,10 @@ We will assume that this new framework will work on the main existing script str
    > FRAMEWORK_TEST: The default test implementation as a string.
    > FRAMEWORK_MOCK: The default mock example.
 
+Based on the implementation for the Jest Framework:
+
+1. Insert a new FRAMEWORK_MOCK and FRAMEWORK_TEST. Like on next:
+
 ```bash
 JEST_TEST="import {testingMock} from \"./mocks/className\"
 describe ('Verify testingMethod using testingMock to validate the scenario ABC', () => {
