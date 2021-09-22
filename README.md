@@ -15,10 +15,10 @@ The project Tests Factory aims to insert a new default unit test implementation.
 | Framework                                   | Assigned          | Progress |
 | ------------------------------------------- | ----------------- | -------- |
 | Jest                                        | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![90%](https://progress-bar.dev/90)|
-| PyUnit                                      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://github.com/arctouch-joaolemos"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![0%](https://progress-bar.dev/0)|
+| PyUnit                                      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![70%](https://progress-bar.dev/70)|
 | JUnit                                       | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
-| Go                                          | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|  
-| Ruby                                        | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a> | ![0%](https://progress-bar.dev/0)|
+| Go                                          | <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![0%](https://progress-bar.dev/0)|  
+| Rspec                                      | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a>  <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![70%](https://progress-bar.dev/70)|
 | Jasmine                                     | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
 | PHPUnit                                     | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a> |![0%](https://progress-bar.dev/0)|
 | .net                                        | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
@@ -42,8 +42,9 @@ Thanks to these wonderful people:
     <td align="center">
        <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="80px;" style="border-radius:50%" alt=""/>  </a>   
        <a href="https://github.com/arctouch-pedrocosta"><img src="https://avatars.githubusercontent.com/u/10923005?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
-       <a href="https://github.com/arctouch-joaolemos"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+       <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
       <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+      <a href="https://github.com/0x6775737461"><img src="https://avatars.githubusercontent.com/u/81694100?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
     </td>
   </tr>
 </table>
