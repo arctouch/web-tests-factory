@@ -40,6 +40,37 @@ describe ("Verify testingMethod using testingMock to validate the scenario ABC/"
 
 NEXT_MOCK='const testingMock= "Scenario A is success";'
 
+PYUNIT_TEST="import unittest
+
+from mocks import Mocks
+
+from class_name import ClassName
+
+class ClassNameTest(unittest.TestCase):
+    def setUp(self):
+        self.test_class = ClassName()
+        self.mocks = Mocks()
+
+    def test_method_01(self):
+        self.assertEqual(
+            self.test_class.test_method(),
+            self.mocks.mock_method_01_result(),
+            'incorrect value'
+        )
+
+if __name__ == \"__main__\":
+    unittest.main()
+"
+
+PYUNIT_MOCK="class Mocks:
+    def mock_method_01_result(self):
+        return \"Scenario A is success\"
+"
+
+PYUNIT_EXAMPLE="class ClassName:
+    def test_method(self):
+        return \"Scenario A is success\""
+
 echo -e \
 """
 Hello, Welcome to ${ORANGE}Tests Factory${NC}!
@@ -47,29 +78,54 @@ With this script you will have a new default folder to implement yout unit tests
 ${ORANGE}Please, select the Tests Framework you should use on this project: ${NC}
 """
 
-echo -ne "1. Jest\n\n${RED}Select Framework >>${NC} "
-read -r FRAMEWORK_REFERENCE_NUMBER
+echo -e \
+"""
+1. Jest
+2. PyUnit
+"""
 
-if [ "$FRAMEWORK_REFERENCE_NUMBER" == '1' ]; then
+echo -ne "1. Jest\n\n${RED}Select Framework >>${NC} "
+
+read FRAMEWORK_REFERENCE_NUMBER
+
+if [[ $FRAMEWORK_REFERENCE_NUMBER == "1" ]]; then
   FRAMEWORK_NAME="Jest"
+
   TEST_FOLDER="tests"
   TEST_MOCK_FOLDER="tests/mocks"
+
   TEST_FILE="tests/className.test.js"
   MOCK_FILE="tests/mocks/classNameMock.js"
-  FRAMEWORK_MOCK="$NEXT_MOCK"
-  FRAMEWORK_TEST="$NEXT_TEST"
+
+  FRAMEWORK_MOCK=${NEXT_MOCK}
+  FRAMEWORK_TEST=${NEXT_TEST}
+elif [[ $FRAMEWORK_REFERENCE_NUMBER == "2" ]]; then
+  FRAMEWORK_NAME="pyunit"
+
+  TEST_FOLDER="class_name"
+
+  TEST_MOCK_FOLDER="class_name/mocks"
+  TEST_FILE="class_name/class_name_test.py"
+  MOCK_FILE="class_name/mocks/__init__.py"
+  INIT_FILE="class_name/__init__.py"
+
+  FRAMEWORK_MOCK=${PYUNIT_MOCK}
+  FRAMEWORK_TEST=${PYUNIT_TEST}
+  INIT_CONTENT=${PYUNIT_EXAMPLE}
 fi
 
 ## Insert new folder and tests
 echo -e \
 """
-${ORANGE}#${NC} ${FRAMEWORK_NAME} Framework $(mkdir ${TEST_FOLDER})
-${ORANGE}##${NC} Create new ${TEST_FOLDER} folder $(mkdir ${TEST_MOCK_FOLDER})
-${ORANGE}###${NC} Create new ${TEST_MOCK_FOLDER} folder
+${ORANGE}#${NC} ${FRAMEWORK_NAME} Framework
+${ORANGE}##${NC} Create new ${TEST_FOLDER} folder $(mkdir ${TEST_FOLDER})
+${ORANGE}###${NC} Create new ${TEST_MOCK_FOLDER} folder $(mkdir ${TEST_MOCK_FOLDER})
 ${ORANGE}####${NC} Insert default test on tests folder \
 $(echo "${FRAMEWORK_TEST}" >> ${TEST_FILE}) \
-$(echo "${FRAMEWORK_MOCK}" >> ${MOCK_FILE})
-${ORANGE}#####${NC} Insert default mock on tests/mocks folder
+${ORANGE}#####${NC} Insert default mock on tests/mocks folder \
+$(echo "${FRAMEWORK_MOCK}" >> ${MOCK_FILE}) \
+
+$(echo "${INIT_CONTENT}" >> ${INIT_FILE}) \
 
 ${GREEN}##############################${NC}
 ${GREEN} Successfully created! ${NC}
