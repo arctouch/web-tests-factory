@@ -71,6 +71,39 @@ PYUNIT_EXAMPLE="class ClassName:
     def test_method(self):
         return \"Scenario A is success\""
 
+RSPEC_TEST="require \"./class_name.rb\"
+require \"./mocks/class_name_mock.rb\"
+
+describe ClassName do
+    describe \"#test_method\" do
+
+        before do
+            @test_class = ClassName.new()
+            @mocks = ClassNameMock.new()
+        end
+
+
+        it \"puts the ordered book in customer's order history\" do
+            expect(@test_class.test_method).to eq(@mocks.mock_method_01_result)
+        end
+    end
+end
+"
+
+RSPEC_MOCK="class ClassNameMock
+    def mock_method_01_result
+        \"Scenario A is success\"
+    end
+end
+"
+
+RSPEC_EXAMPLE="class ClassName
+    def test_method
+        \"Scenario A is success\"
+    end
+end
+"
+
 echo -e \
 """
 Hello, Welcome to ${ORANGE}Tests Factory${NC}!
@@ -79,12 +112,12 @@ ${ORANGE}Please, select the Tests Framework you should use on this project: ${NC
 """
 
 echo -e \
-"""
-1. Jest
+"""1. Jest
 2. PyUnit
+3. Rspec
 """
 
-echo -ne "1. Jest\n\n${RED}Select Framework >>${NC} "
+echo -ne "${RED}Select Framework >>${NC} "
 
 read FRAMEWORK_REFERENCE_NUMBER
 
@@ -103,15 +136,30 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "2" ]]; then
   FRAMEWORK_NAME="pyunit"
 
   TEST_FOLDER="class_name"
-
   TEST_MOCK_FOLDER="class_name/mocks"
+
   TEST_FILE="class_name/class_name_test.py"
   MOCK_FILE="class_name/mocks/__init__.py"
   INIT_FILE="class_name/__init__.py"
 
   FRAMEWORK_MOCK=${PYUNIT_MOCK}
   FRAMEWORK_TEST=${PYUNIT_TEST}
+
   INIT_CONTENT=${PYUNIT_EXAMPLE}
+elif [[ $FRAMEWORK_REFERENCE_NUMBER == "3" ]]; then
+  FRAMEWORK_NAME="rspec"
+
+  TEST_FOLDER="spec"
+  TEST_MOCK_FOLDER="mocks"
+
+  TEST_FILE="spec/class_name_spec.rb"
+  MOCK_FILE="mocks/class_name_mock.rb"
+  INIT_FILE="class_name.rb"
+
+  FRAMEWORK_MOCK=${RSPEC_MOCK}
+  FRAMEWORK_TEST=${RSPEC_TEST}
+
+  INIT_CONTENT=${RSPEC_EXAMPLE}
 fi
 
 ## Insert new folder and tests
