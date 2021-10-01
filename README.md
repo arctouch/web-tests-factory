@@ -16,7 +16,7 @@ sh testsFactory.sh
 
 ## Demo steps
 
-![Demo steps](https://raw.githubusercontent.com/arctouch/web-tests-factory/add-demo/assets/demo.gif)
+![Demo steps](https://raw.githubusercontent.com/arctouch/web-tests-factory/main/assets/demo.gif)
 
 ## Supported test framework
 
