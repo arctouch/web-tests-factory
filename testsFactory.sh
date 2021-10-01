@@ -104,6 +104,35 @@ RSPEC_EXAMPLE="class ClassName
 end
 "
 
+GO_TEST="package class_name
+
+import \"testing\"
+
+func TestAdd(t *testing.T){
+
+    got := TestMethod()
+    want := MockMethod_01Result
+
+    if got != want {
+        t.Errorf(\"got %q, wanted %q\", got, want)
+    }
+}
+"
+
+GO_MOCK="package class_name
+
+var  (
+    MockMethod_01Result = \"Scenario A is success\"
+)
+"
+
+GO_EXAMPLE="package class_name
+
+func TestMethod() (string) {
+    return \"Scenario A is success\"
+}
+"
+
 echo -e \
 """
 Hello, Welcome to ${ORANGE}Tests Factory${NC}!
@@ -115,6 +144,7 @@ echo -e \
 """1. Jest
 2. PyUnit
 3. Rspec
+4. Go
 """
 
 echo -ne "${RED}Select Framework >>${NC} "
@@ -160,6 +190,20 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "3" ]]; then
   FRAMEWORK_TEST=${RSPEC_TEST}
 
   INIT_CONTENT=${RSPEC_EXAMPLE}
+elif [[ $FRAMEWORK_REFERENCE_NUMBER == "4" ]]; then
+  FRAMEWORK_NAME="go"
+
+  TEST_FOLDER="spec"
+  TEST_MOCK_FOLDER="mocks"
+
+  TEST_FILE="class_name_test.go"
+  MOCK_FILE="class_name_mocks.go"
+  INIT_FILE="class_name.go"
+
+  FRAMEWORK_MOCK=${GO_MOCK}
+  FRAMEWORK_TEST=${GO_TEST}
+
+  INIT_CONTENT=${GO_EXAMPLE}
 fi
 
 ## Insert new folder and tests
