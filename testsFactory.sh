@@ -130,8 +130,8 @@ if [[ $FRAMEWORK_REFERENCE_NUMBER == "1" ]]; then
   TEST_FILE="tests/className.test.js"
   MOCK_FILE="tests/mocks/classNameMock.js"
 
-  FRAMEWORK_MOCK=${NEXT_MOCK}
-  FRAMEWORK_TEST=${NEXT_TEST}
+  FRAMEWORK_MOCK="$NEXT_MOCK"
+  FRAMEWORK_TEST="$NEXT_TEST"
 elif [[ $FRAMEWORK_REFERENCE_NUMBER == "2" ]]; then
   FRAMEWORK_NAME="pyunit"
 
@@ -142,8 +142,8 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "2" ]]; then
   MOCK_FILE="class_name/mocks/__init__.py"
   INIT_FILE="class_name/__init__.py"
 
-  FRAMEWORK_MOCK=${PYUNIT_MOCK}
-  FRAMEWORK_TEST=${PYUNIT_TEST}
+  FRAMEWORK_MOCK="$PYUNIT_MOCK"
+  FRAMEWORK_TEST="$PYUNIT_TEST"
 
   INIT_CONTENT=${PYUNIT_EXAMPLE}
 elif [[ $FRAMEWORK_REFERENCE_NUMBER == "3" ]]; then
@@ -156,24 +156,24 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "3" ]]; then
   MOCK_FILE="mocks/class_name_mock.rb"
   INIT_FILE="class_name.rb"
 
-  FRAMEWORK_MOCK=${RSPEC_MOCK}
-  FRAMEWORK_TEST=${RSPEC_TEST}
+  FRAMEWORK_MOCK="$RSPEC_MOCK"
+  FRAMEWORK_TEST="$RSPEC_TEST"
 
-  INIT_CONTENT=${RSPEC_EXAMPLE}
+  INIT_CONTENT="$RSPEC_EXAMPLE"
 fi
 
 ## Insert new folder and tests
 echo -e \
 """
 ${ORANGE}#${NC} ${FRAMEWORK_NAME} Framework
-${ORANGE}##${NC} Create new ${TEST_FOLDER} folder $(mkdir ${TEST_FOLDER})
-${ORANGE}###${NC} Create new ${TEST_MOCK_FOLDER} folder $(mkdir ${TEST_MOCK_FOLDER})
+${ORANGE}##${NC} Create new ${TEST_FOLDER} folder $(mkdir "$TEST_FOLDER")
+${ORANGE}###${NC} Create new ${TEST_MOCK_FOLDER} folder $(mkdir "$TEST_MOCK_FOLDER")
 ${ORANGE}####${NC} Insert default test on tests folder \
-$(echo "${FRAMEWORK_TEST}" >> ${TEST_FILE}) \
+$(echo "${FRAMEWORK_TEST}" >> "$TEST_FILE") \
 ${ORANGE}#####${NC} Insert default mock on tests/mocks folder \
-$(echo "${FRAMEWORK_MOCK}" >> ${MOCK_FILE}) \
+$(echo "${FRAMEWORK_MOCK}" >> "$MOCK_FILE") \
 
-$(echo "${INIT_CONTENT}" >> ${INIT_FILE}) \
+$(echo "${INIT_CONTENT}" >> "$INIT_FILE") \
 
 ${GREEN}##############################${NC}
 ${GREEN} Successfully created! ${NC}
