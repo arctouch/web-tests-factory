@@ -5,8 +5,18 @@ The project Tests Factory aims to insert a new default unit test implementation.
 
 ## How to use this project
 1. Download the file `testsFactory.sh`
-2. Inside the principal project folder, execute the script : `./testsFactory.sh`
+```sh
+curl https://raw.githubusercontent.com/arctouch/web-tests-factory/main/testsFactory.sh -o testsFactory.sh
+```
+2. Inside the principal project folder, execute the script:
+```sh
+sh testsFactory.sh
+```
 3. Follow the instructions, and define with the related number how framework you need.
+
+## Demo steps
+
+![Demo steps](https://raw.githubusercontent.com/arctouch/web-tests-factory/add-demo/assets/demo.gif)
 
 ## Supported test framework
 
