@@ -5,8 +5,18 @@ The project Tests Factory aims to insert a new default unit test implementation.
 
 ## How to use this project
 1. Download the file `testsFactory.sh`
-2. Inside the principal project folder, execute the script : `./testsFactory.sh`
+```sh
+curl https://raw.githubusercontent.com/arctouch/web-tests-factory/main/testsFactory.sh -o testsFactory.sh
+```
+2. Inside the principal project folder, execute the script:
+```sh
+sh testsFactory.sh
+```
 3. Follow the instructions, and define with the related number how framework you need.
+
+## Demo steps
+
+![Demo steps](https://raw.githubusercontent.com/arctouch/web-tests-factory/add-demo/assets/demo.gif)
 
 ## Supported test framework
 
@@ -17,7 +27,7 @@ The project Tests Factory aims to insert a new default unit test implementation.
 | Jest                                        | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
 | PyUnit                                      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
 | JUnit                                       | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
-| Go                                          | <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![0%](https://progress-bar.dev/0)|  
+| Go                                          | <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
 | Rspec                                      | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a>  <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
 | Jasmine                                     | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
 | PHPUnit                                     | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a> |![0%](https://progress-bar.dev/0)|
@@ -40,7 +50,7 @@ Thanks to these wonderful people:
 <table>
   <tr>
     <td align="center">
-       <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="80px;" style="border-radius:50%" alt=""/>  </a>   
+       <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="80px;" style="border-radius:50%" alt=""/>  </a>
        <a href="https://github.com/arctouch-pedrocosta"><img src="https://avatars.githubusercontent.com/u/10923005?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
        <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
       <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
@@ -64,4 +74,4 @@ Thanks to these wonderful people:
 <a href="https://twitter.com/arctouch"><img alt="Twitter icon" src="https://img.icons8.com/ios-filled/50/000000/twitter-circled--v1.png" width="30"/></a>
 <a href="https://medium.com/arctouch"><img alt="Medium icon" src="https://img.icons8.com/ios-filled/50/000000/medium-logo.png" width="30"/></a>
 <a href="https://dribbble.com/arctouch"><img alt="Dribbble icon" src="https://img.icons8.com/dotty/80/000000/dribbble.png" width="30"/></a>
-<a href="https://www.instagram.com/arctouchlife/"><img alt="Instagram icon" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="30"/></a>   
+<a href="https://www.instagram.com/arctouchlife/"><img alt="Instagram icon" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="30"/></a>
