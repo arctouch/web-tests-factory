@@ -32,6 +32,7 @@ sh testsFactory.sh
 | Jasmine                                     | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
 | PHPUnit                                     | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a> |![0%](https://progress-bar.dev/0)|
 | .net                                        | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
+| xunit                                        | <a href="https://github.com/arctouch-igorparanhos"><img src="https://avatars.githubusercontent.com/u/90213223?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
 
 <!-- end-progress-table -->
 
@@ -55,6 +56,7 @@ Thanks to these wonderful people:
        <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
       <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
       <a href="https://github.com/0x6775737461"><img src="https://avatars.githubusercontent.com/u/81694100?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
+       <a href="https://github.com/arctouch-igorparanhos"><img src="https://avatars.githubusercontent.com/u/90213223?v=4" width="80px;" style="border-radius:50%" alt=""/></a>
     </td>
   </tr>
 </table>
