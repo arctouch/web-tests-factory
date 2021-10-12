@@ -27,7 +27,7 @@ ORANGE='\033[0;33m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-NEXT_TEST=\
+JEST_TEST=\
 '
 import {testingMock} from "./mocks/className"
 
@@ -38,7 +38,13 @@ describe ("Verify testingMethod using testingMock to validate the scenario ABC/"
 });
 '
 
-NEXT_MOCK='const testingMock= "Scenario A is success";'
+JEST_MOCK='const testingMock= "Scenario A is success";'
+
+JEST_EXAMPLE=\
+'export const testingMethod = (word) => {
+    return word;
+};
+'
 
 PYUNIT_TEST="import unittest
 
@@ -205,26 +211,33 @@ echo -ne "${RED}Select Framework >>${NC} "
 
 read FRAMEWORK_REFERENCE_NUMBER
 
+echo -ne "${RED}Provide file name / class name >>${NC} "
+
+read FILE_NAME
+
 if [[ $FRAMEWORK_REFERENCE_NUMBER == "1" ]]; then
   FRAMEWORK_NAME="Jest"
 
   TEST_FOLDER="tests"
   TEST_MOCK_FOLDER="tests/mocks"
 
-  TEST_FILE="tests/className.test.js"
-  MOCK_FILE="tests/mocks/classNameMock.js"
+  TEST_FILE="tests/$FILE_NAME.test.js"
+  MOCK_FILE="tests/mocks/${FILE_NAME}Mock.js"
+  INIT_FILE="$FILE_NAME.js"
 
-  FRAMEWORK_MOCK=${NEXT_MOCK}
-  FRAMEWORK_TEST=${NEXT_TEST}
+  FRAMEWORK_MOCK=${JEST_MOCK}
+  FRAMEWORK_TEST=${JEST_TEST}
+
+  INIT_CONTENT=${JEST_EXAMPLE}
 elif [[ $FRAMEWORK_REFERENCE_NUMBER == "2" ]]; then
   FRAMEWORK_NAME="pyunit"
 
-  TEST_FOLDER="class_name"
-  TEST_MOCK_FOLDER="class_name/mocks"
+  TEST_FOLDER="$FILE_NAME"
+  TEST_MOCK_FOLDER="$FILE_NAME/mocks"
 
-  TEST_FILE="class_name/class_name_test.py"
-  MOCK_FILE="class_name/mocks/__init__.py"
-  INIT_FILE="class_name/__init__.py"
+  TEST_FILE="$FILE_NAME/${FILE_NAME}_test.py"
+  MOCK_FILE="$FILE_NAME/mocks/__init__.py"
+  INIT_FILE="$FILE_NAME/__init__.py"
 
   FRAMEWORK_MOCK=${PYUNIT_MOCK}
   FRAMEWORK_TEST=${PYUNIT_TEST}
@@ -236,9 +249,9 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "3" ]]; then
   TEST_FOLDER="spec"
   TEST_MOCK_FOLDER="mocks"
 
-  TEST_FILE="spec/class_name_spec.rb"
-  MOCK_FILE="mocks/class_name_mock.rb"
-  INIT_FILE="class_name.rb"
+  TEST_FILE="spec/${FILE_NAME}_spec.rb"
+  MOCK_FILE="mocks/${FILE_NAME}_mock.rb"
+  INIT_FILE="${FILE_NAME}.rb"
 
   FRAMEWORK_MOCK=${RSPEC_MOCK}
   FRAMEWORK_TEST=${RSPEC_TEST}
@@ -250,9 +263,9 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "4" ]]; then
   TEST_FOLDER="spec"
   TEST_MOCK_FOLDER="mocks"
 
-  TEST_FILE="class_name_test.go"
-  MOCK_FILE="class_name_mocks.go"
-  INIT_FILE="class_name.go"
+  TEST_FILE="${FILE_NAME}_test.go"
+  MOCK_FILE="${FILE_NAME}_mocks.go"
+  INIT_FILE="${FILE_NAME}.go"
 
   FRAMEWORK_MOCK=${GO_MOCK}
   FRAMEWORK_TEST=${GO_TEST}
@@ -264,8 +277,8 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "5" ]]; then
   TEST_FOLDER="Tests"
   TEST_MOCK_FOLDER="Tests/mocks"
 
-  TEST_FILE="Tests/ClassNameTest.cs"
-  MOCK_FILE="Tests/mocks/ClassNameMock.cs"
+  TEST_FILE="Tests/${FILE_NAME}Test.cs"
+  MOCK_FILE="Tests/mocks/${FILE_NAME}Mock.cs"
   INIT_FILE="Tests/Tests.csproj"
 
   FRAMEWORK_MOCK=${XUNIT_MOCK}
