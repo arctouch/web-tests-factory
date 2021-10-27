@@ -1,5 +1,7 @@
 # Tests Factory
 
+[![Validate Code](https://github.com/arctouch/web-tests-factory/actions/workflows/validate_code.yml/badge.svg)](https://github.com/arctouch/web-tests-factory/actions/workflows/validate_code.yml)
+
 The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests.
 
 
