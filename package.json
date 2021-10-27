@@ -1,6 +1,6 @@
 {
   "name": "web-tests-factory",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests.",
   "main": "bin/index.js",
   "scripts": {
