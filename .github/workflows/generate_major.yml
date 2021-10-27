@@ -1,0 +1,17 @@
+name: Generate Major Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate_major:
+    name: arctouch/generate_major
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Run script 🖼️
+        run: |
+          npm install
+          npm run major
