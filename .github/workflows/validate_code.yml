@@ -1,0 +1,42 @@
+
+name: Validate Code
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - name: Setup Node env 🏗
+        run: |
+          npm -v
+
+      - name: Install dependencies 👨🏻‍💻
+        run: |
+          npm install
+
+      - name: Run lint 👀
+        run: |
+          npm run lint
+
+      - name: Run tests 🧪
+        run: |
+          npm run test

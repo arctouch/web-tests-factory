@@ -1,0 +1,17 @@
+name: Generate Minor Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate_minor:
+    name: arctouch/generate_minor
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Run script 🖼️
+        run: |
+          npm install
+          npm run minor
