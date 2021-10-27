@@ -1,13 +1,16 @@
 {
   "name": "web-tests-factory",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "The project Tests Factory aims to insert a new default unit test implementation. The result of the script execution will be a folder with a default test on the existing project, that will facilitate the creation of new tests.",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"No test specified\"",
     "publish": "echo \"No publish command\"",
     "lint": "eslint bin/**",
-    "release": "release-it"
+    "release": "release-it",
+    "patch": "release-it patch --ci",
+    "minor": "release-it minor --ci",
+    "major": "release-it major --ci"
   },
   "bin": {
     "web-tests-factory": "./bin/index.js"
@@ -32,8 +35,5 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.2",
     "release-it": "^14.11.6"
-  },
-  "npm": {
-    "publish": false
   }
 }
