@@ -20,4 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const testingMock= "Scenario A is success";
+export const sayHelloMock = () => 'Scenario A is success';

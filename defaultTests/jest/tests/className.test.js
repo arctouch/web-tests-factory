@@ -20,11 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import {testingMock} from "./mocks/className"
+import {
+  sayHelloMock,
+} from './mocks/classname';
+import {
+  sayHello,
+} from '../classname';
 
-describe ("Verify testingMethod using testingMock to validate the scenario ABC/", () => {
-	test(" testingMock validate scenario A ", () => {
-		expect(testingMethod(testingMock)).toEqual("Scenario A is success");
-	});
+describe ('Verify classname using mocks', () => {
+  test(' sayHello should return a string ', () => {
+    expect(sayHello()).toEqual(sayHelloMock());
+  });
 });
-
