@@ -5,7 +5,7 @@ const {
 const defaultValues = {
   string: '\'Scenario A is success\'',
   number: 0,
-  boolean: false,
+  bool: false,
 };
 
 module.exports = (filename, methods) => {
@@ -13,8 +13,8 @@ module.exports = (filename, methods) => {
   const formattedMethod = methods.reduce((acc, elm) => ({
     methods: acc.methods.concat({
       name: camelCase(elm.name),
-      type: defaultValues[elm.type] ? elm.type : 'string',
-      value: defaultValues[elm.type] || defaultValues.string,
+      type: defaultValues[elm.type] !== undefined ? elm.type : 'string',
+      value: defaultValues[elm.type] !== undefined ? defaultValues[elm.type] : defaultValues.string,
     }),
     names: acc.names += `\n  ${camelCase(elm.name)},`,
     mocks: acc.mocks += `\n  ${camelCase(elm.name)}Mock,`,
