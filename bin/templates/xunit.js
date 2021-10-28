@@ -2,7 +2,7 @@ const {
   pascalCase,
 } = require('change-case');
 
-module.exports = (filename, methods) => [
+module.exports = (filename) => [
   {
     name: `Tests/${pascalCase(filename)}Test.cs`,
     template: `using System;
