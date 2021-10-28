@@ -1,22 +1,48 @@
-module.exports = (filename) => [
-  {
-    name: `tests/${filename}.test.js`,
-    template: `import {testingMock} from "./mocks/${filename}"
+const {
+  camelCase,
+} = require('change-case');
 
-describe ("Verify testingMethod using testingMock to validate the scenario ABC/", () => {
-    test(" testingMock validate scenario A ", () => {
-        expect(testingMethod(testingMock)).toEqual("Scenario A is success");
-    });
+const defaultValues = {
+  string: '\'Scenario A is success\'',
+  number: 0,
+  boolean: false,
+};
+
+module.exports = (filename, methods) => {
+  // eslint-disable-next-line no-return-assign
+  const formattedMethod = methods.reduce((acc, elm) => ({
+    methods: acc.methods.concat({
+      name: camelCase(elm.name),
+      type: defaultValues[elm.type] ? elm.type : 'string',
+      value: defaultValues[elm.type] || defaultValues.string,
+    }),
+    names: acc.names += `\n  ${camelCase(elm.name)},`,
+    mocks: acc.mocks += `\n  ${camelCase(elm.name)}Mock,`,
+  }), {
+    names: '',
+    mocks: '',
+    methods: [],
+  });
+
+  return [
+    {
+      name: `tests/${filename}.test.js`,
+      template: `import {${formattedMethod.mocks}\n} from './mocks/${filename}';
+import {${formattedMethod.names}\n} from '../${filename}';
+
+describe ('Verify ${filename} using mocks', () => {
+  ${formattedMethod.methods.map(({ name, type }) => `test(' ${name} should return a ${type} ', () => {
+    expect(${name}()).toEqual(${name}Mock());
+  });`).join('\n')}
 });`,
-  },
-  {
-    name: `tests/mocks/${filename}.js`,
-    template: 'const testingMock= "Scenario A is success";',
-  },
-  {
-    name: `${filename}.js`,
-    template: `export const testingMethod = (word) => {
-    return word;
-};`,
-  },
-];
+    },
+    {
+      name: `tests/mocks/${filename}.js`,
+      template: `${formattedMethod.methods.map(({ name, value }) => `export const ${name}Mock = () => ${value};`).join('\n')}\n`,
+    },
+    {
+      name: `${filename}.js`,
+      template: `${formattedMethod.methods.map(({ name, value }) => `export const ${name} = () => ${value};`).join('\n')}\n`,
+    },
+  ];
+};

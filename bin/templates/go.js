@@ -2,7 +2,7 @@ const {
   snakeCase,
 } = require('change-case');
 
-module.exports = (filename) => [
+module.exports = (filename, methods) => [
   {
     name: `${filename}_test.go`,
     template: `package ${snakeCase(filename)}

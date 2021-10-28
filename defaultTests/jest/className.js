@@ -20,7 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-export const testingMethod = (word) => {
-    return word;
-};
-
+export const sayHello = () => 'Scenario A is success';

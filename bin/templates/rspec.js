@@ -3,7 +3,7 @@ const {
   snakeCase,
 } = require('change-case');
 
-module.exports = (filename) => [
+module.exports = (filename, methods) => [
   {
     name: `spec/${filename}_spec.rb`,
     template: `require "./${snakeCase(filename)}.rb"

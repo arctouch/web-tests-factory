@@ -3,7 +3,7 @@ const {
   snakeCase,
 } = require('change-case');
 
-module.exports = (filename) => [
+module.exports = (filename, methods) => [
   {
     name: `${filename}/${filename}_test.py`,
     template: `import unittest
