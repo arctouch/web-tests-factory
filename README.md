@@ -6,15 +6,19 @@ The project Tests Factory aims to insert a new default unit test implementation.
 
 
 ## How to use this project
-1. Download the file `testsFactory.sh`
+1. Install the package from NPM
 ```sh
-curl https://raw.githubusercontent.com/arctouch/web-tests-factory/main/testsFactory.sh -o testsFactory.sh
+npm install -g @arctouch/web-tests-factory
 ```
-2. Inside the principal project folder, execute the script:
+2. You can run the lib inside the project root, like this:
 ```sh
-sh testsFactory.sh
+web-tests-factory --framework go --filename classname --methods say_hello:string get_age:number is_active:bool
 ```
-3. Follow the instructions, and define with the related number how framework you need.
+3. Check all the options with:
+```sh
+web-tests-factory -m # Command Pattern
+web-tests-factory -f # Frameworks list
+```
 
 ## Demo steps
 
@@ -24,17 +28,17 @@ sh testsFactory.sh
 
 <!-- begin-progress-table -->
 
-| Framework                                   | Assigned          | Progress |
-| ------------------------------------------- | ----------------- | -------- |
-| Jest                                        | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
-| PyUnit                                      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
-| JUnit                                       | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
-| Go                                          | <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
-| Rspec                                      | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a>  <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
-| Jasmine                                     | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
-| PHPUnit                                     | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a> |![0%](https://progress-bar.dev/0)|
-| .net                                        | ⌛ waiting assignment|![0%](https://progress-bar.dev/0)|
-| xunit                                        | <a href="https://github.com/arctouch-igorparanhos"><img src="https://avatars.githubusercontent.com/u/90213223?v=4" width="25px;" style="border-radius:50%" alt=""/></a>|![100%](https://progress-bar.dev/100)|
+| Framework | Assigned                                                                                                                                                                                                                                                                                                                                                                          | Progress                              |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| Jest      | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a>                                                                                                                                                         | ![100%](https://progress-bar.dev/100) |
+| PyUnit    | <a href="https://github.com/arctouch-leticiacoelho"><img src="https://avatars.githubusercontent.com/u/82114897?s=400&u=d6c8879b59c0d69fafe4206620f8b4cbd4f4ab81&v=4" width="25px;" style="border-radius:50%" alt=""/></a><a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a> | ![100%](https://progress-bar.dev/100) |
+| JUnit     | ⌛ waiting assignment                                                                                                                                                                                                                                                                                                                                                              | ![0%](https://progress-bar.dev/0)     |
+| Go        | <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>                                                                                                                                                                                                                          | ![100%](https://progress-bar.dev/100) |
+| Rspec     | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a>  <a href="https://joaomarcuslf.com/"><img src="https://avatars.githubusercontent.com/u/78762417?v=4" width="25px;" style="border-radius:50%" alt=""/></a>                                              | ![100%](https://progress-bar.dev/100) |
+| Jasmine   | ⌛ waiting assignment                                                                                                                                                                                                                                                                                                                                                              | ![0%](https://progress-bar.dev/0)     |
+| PHPUnit   | <a href="https://github.com/arctouch-matheusgraciano"><img src="https://avatars.githubusercontent.com/u/89080926?v=4" width="25px;" style="border-radius:50%" alt=""/></a>                                                                                                                                                                                                        | ![0%](https://progress-bar.dev/0)     |
+| .net      | ⌛ waiting assignment                                                                                                                                                                                                                                                                                                                                                              | ![0%](https://progress-bar.dev/0)     |
+| xunit     | <a href="https://github.com/arctouch-igorparanhos"><img src="https://avatars.githubusercontent.com/u/90213223?v=4" width="25px;" style="border-radius:50%" alt=""/></a>                                                                                                                                                                                                           | ![100%](https://progress-bar.dev/100) |
 
 <!-- end-progress-table -->
 
