@@ -192,6 +192,58 @@ XUNIT_EXAMPLE="<Project Sdk=\"Microsoft.NET.Sdk\">
 </Project>
 "
 
+PHPUNIT_TEST="<?php
+use PHPUnit\Framework\TestCase;
+
+class ExampleClassTest extends TestCase
+{
+
+    protected \$instance;
+
+    protected function setUp() {
+        \$this->instance = new ExampleClass();
+    }
+
+    public function testCreatePuppy() {
+        \$puppy = \$this->instance->createPuppy();
+        \$this->assertTrue(is_string(\$puppy));
+        return \$puppy;
+    }
+
+    /**
+     * @depends testCreatePuppy
+     */
+    public function testPraisePuppy(\$puppy) {
+        \$praise = \$this->instance->praisePuppy(\$puppy);
+        \$praiseGirl = \$this->instance->praisePuppy(\$puppy, \"girl\");
+        \$praiseBoy = \$this->instance->praisePuppy(\$puppy, \"boy\");
+
+        \$expected = \"\$puppy is a good dog\";
+        \$expectedGirl = \"\$puppy is a good girl\";
+        \$expectedBoy = \"\$puppy is a good boy\";
+        \$this->assertEquals(\$expected, \$praise);
+        \$this->assertEquals(\$expectedGirl, \$praiseGirl);
+        \$this->assertEquals(\$expectedBoy, \$praiseBoy);
+    }
+}
+"
+
+PHPUNIT_EXAMPLE="<?php
+class ExampleClass
+{
+  private \$puppies = [\"Lassie\", \"Lala\", \"Nala\", \"Thor\", \"Bud\", \"Marley\"];
+
+  public function createPuppy() {
+    \$index = array_rand(\$this->puppies);
+    return \$this->puppies[\$index];
+  }
+
+  public function praisePuppy(\$puppy, \$noun = \"dog\") {
+    return \"\$puppy is a good \$noun\";
+  }
+}
+"
+
 echo -e \
 """
 Hello, Welcome to ${ORANGE}Tests Factory${NC}!
@@ -205,6 +257,7 @@ echo -e \
 3. Rspec
 4. Go
 5. xUnit
+6. PHPUnit
 """
 
 echo -ne "${RED}Select Framework >>${NC} "
@@ -284,6 +337,17 @@ elif [[ $FRAMEWORK_REFERENCE_NUMBER == "5" ]]; then
   FRAMEWORK_MOCK=${XUNIT_MOCK}
   FRAMEWORK_TEST=${XUNIT_TEST}
   INIT_CONTENT=${XUNIT_EXAMPLE}
+elif [[ $FRAMEWORK_REFERENCE_NUMBER == "6" ]]; then
+  FRAMEWORK_NAME="phpunit"
+
+  TEST_FOLDER="tests"
+
+  TEST_FILE="tests/${FILE_NAME}Test.php"
+  INIT_FILE="tests/${FILE_NAME}.php"
+
+  FRAMEWORK_TEST=${PHPUNIT_TEST}
+  INIT_CONTENT=${PHPUNIT_EXAMPLE}
+  FRAMEWORK_MOCK_WARNING="https://phpunit.readthedocs.io/en/9.5/test-doubles.html"
 fi
 
 ## Insert new folder and tests
@@ -294,9 +358,19 @@ ${ORANGE}##${NC} Create new ${TEST_FOLDER} folder $(mkdir ${TEST_FOLDER})
 ${ORANGE}###${NC} Create new ${TEST_MOCK_FOLDER} folder $(mkdir ${TEST_MOCK_FOLDER})
 ${ORANGE}####${NC} Insert default test on tests folder \
 $(echo "${FRAMEWORK_TEST}" >> ${TEST_FILE}) \
-${ORANGE}#####${NC} Insert default mock on tests/mocks folder \
-$(echo "${FRAMEWORK_MOCK}" >> ${MOCK_FILE}) \
+"""
+if [ -z ${FRAMEWORK_MOCK+x} ]; then
+  echo "${FRAMEWORK_NAME} doesn't have mock files: ${FRAMEWORK_MOCK_WARNING}";
+else
+  echo -e \
+  """
+  ${ORANGE}#####${NC} Insert default mock on tests/mocks folder \
+  $(echo "${FRAMEWORK_MOCK}" >> ${MOCK_FILE}) \
+  """
+fi
 
+echo -e \
+"""
 $(echo "${INIT_CONTENT}" >> ${INIT_FILE}) \
 
 ${GREEN}##############################${NC}
